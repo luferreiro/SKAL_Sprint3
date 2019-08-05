@@ -24,10 +24,8 @@ include ("nav_bar.php");
                 <li class="list-group-item">Email: <?= $usuario['email']?></li>
                 <div class="spacer"></div>
             </ul>
-
-                <a class="btn btn-primary" href="editarUsuario.php?id=<?= $usuario['id']?>">Editar</a>
-
         </div>
+        <br>
         <a href="abm.php">Volver</a>
     </div>
 

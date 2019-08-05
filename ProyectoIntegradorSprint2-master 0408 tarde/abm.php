@@ -64,13 +64,13 @@ $usuarios = Query::listado($pdo,"users");
               <?= $usuario['perfil'];?>
           </td>
           <td>
-              <a href="perfilUsuario.php?id= <?= $usuario['id'];?>">Ver</a>
+              <a href="perfilUsuario.php?id= <?= $usuario['id'];?>"><i class="fas fa-user-check"></i></a>
           </td>
           <td>
-              <a href="editarUsuario.php?id= <?= $usuario['id'];?>">Editar</a>
+              <a href="editarUsuario.php?id= <?= $usuario['id'];?>"><i class="fas fa-user-edit"></i></a>
           </td>
           <td>
-              <a href="eliminarUsuario.php">Eliminar</a>
+              <a href="eliminarUsuario.php"><i class="fas fa-user-slash"></i></a>
           </td>
 
       </tr>
@@ -83,44 +83,3 @@ $usuarios = Query::listado($pdo,"users");
 </table>
 </div>
 <div class="spacer"></div>
-
-
-<br>
-<div class="card" style="overflow-x:auto;">
-  <h3 class="card-header">Productos<h3>
-<table class="table" >
-  <thead>
-    <tr>
-      <th scope="col">Productos</th>
-      <th scope="col">Clase</th>
-      <th scope="col">Imagen</th>
-      <th scope="col">Modificaciones</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td><i class="fas fa-file-upload"></i> <i class="fas fa-minus-circle"></i></td>
-      <td><i class="far fa-edit"></i> <i class="fas fa-dollar-sign"></i> <i class="far fa-trash-alt"></i> </td>
-    </tr>
-    <tr>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td><i class="fas fa-file-upload"></i> <i class="fas fa-minus-circle"></td>
-      <td><i class="far fa-edit"></i> <i class="fas fa-dollar-sign"></i> <i class="far fa-trash-alt"></i></i></td>
-    </tr>
-    <tr>
-      <td> Larry the Bird </td>
-      <td> blah </td>
-      <td><i class="fas fa-file-upload"></i> <i class="fas fa-minus-circle"></td>
-      <td><i class="far fa-edit"></i> <i class="fas fa-dollar-sign"></i> <i class="far fa-trash-alt"></i></td>
-    </tr>
-    <tr>
-      <td>
-    <i class="far fa-plus-square"></i>
-      </td>
-    </tr>
-  </tbody>
-</table>
-</div>
