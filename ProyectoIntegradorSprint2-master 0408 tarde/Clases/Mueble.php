@@ -9,6 +9,19 @@ abstract class Mueble{
   protected $ancho;
   protected $profundidad;
   protected $descripcion;
+  protected $foto;
+
+  public function __construct($nombre=null, $precio=null, $material=null , $alto = null , $ancho=null, $produndidad=null, $descripcion=null, $foto=null){
+    $this-> nombre= $nombre;
+    $this-> precio = $precio;
+    $this -> material = $material;
+    $this-> alto = $alto;
+    $this-> ancho = $ancho;
+    $this-> profundidad = $profundidad;
+    $this-> descripcion = $descripcion;
+    $this-> foto = $foto;
+  }
+
 
   public function getId(){
     return $this->id;
@@ -46,7 +59,7 @@ public function getMaterial(){
   return $this->material;
 }
 
-public function setId($material){
+public function setMaterial($material){
   $this->material = $material;
 }
 
@@ -81,6 +94,15 @@ public function getDescripcion(){
 public function setDescripcion($descripción){
   $this->descripcion = $descripción;
 }
+
+public function getFoto(){
+  return $this->foto;
+}
+
+public function setFoto($foto){
+  $this->foto = $foto;
+}
+
 
 }
 

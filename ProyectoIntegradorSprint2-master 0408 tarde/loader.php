@@ -9,6 +9,8 @@
   require_once("clases/Autenticador.php");
   require_once("clases/Usuario.php");
   require_once("clases/Encriptar.php");
+  require_once("clases/Mueble.php");
+  require_once("clases/ArmarMueble.php");
 /*
 require_once("clases/ArmarRegistro.php");
 require_once("clases/BaseJSON.php");
@@ -27,6 +29,7 @@ require_once("clases/BaseJSON.php");
 //Agregado por Lu el 22/7
   $validar = new Validador();
   $registro = new ArmarRegistro();
+  $registro_mueble = new ArmarMueble();
   //$json = new BaseJSON("usuarios.json");
   Autenticador::iniciarSession();
 
