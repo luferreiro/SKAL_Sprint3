@@ -70,7 +70,7 @@ $usuarios = Query::listado($pdo,"users");
               <a href="editarUsuario.php?id= <?= $usuario['id'];?>"><i class="fas fa-user-edit"></i></a>
           </td>
           <td>
-              <a href="eliminarUsuario.php"><i class="fas fa-user-slash"></i></a>
+              <a href="eliminarUsuario.php?id= <?= $usuario['id'];?>"><i class="fas fa-user-slash"></i></a>
           </td>
 
       </tr>

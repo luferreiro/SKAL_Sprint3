@@ -2,6 +2,7 @@
 
 <?php
 require_once("loader.php");
+require_once("helpers.php");
 
 if (isset($_GET['id'])) {
   $id=$_GET['id'];
@@ -9,6 +10,7 @@ if (isset($_GET['id'])) {
 }
 //esto se ejecuta si el usuario indica que desea borrar el usuario
 if (isset($_POST["borrar"])&&$_POST["borrar"]=="Si") {
+
   Query::borrarUsuario($pdo, "users", $id);
   header('Location:abm.php');
   exit;

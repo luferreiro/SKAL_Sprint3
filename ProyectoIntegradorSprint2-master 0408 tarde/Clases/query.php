@@ -22,19 +22,19 @@ class Query{
         //Retorno el array sólo del usuario encontrado
         return $usuarioEncontrado;
     }
-    static public function borrarUsuario($pdo,$tabla,$idUsuario){
+    static public function borrarUsuario($pdo,$tabla,$id){
         //Aquí armo el query que deseo, en este caso es el borrado de un usuario específico
-        $sql = "delete from $tabla where id=$idUsuario";
+        $sql = "delete from $tabla where (id=$id)";
         //Aquí preparo la consulta, tal como me lo indica la secuencia de trabajar con PDO
         $query=$pdo->prepare($sql);
         //Aquí vean que ejecuto el Bindeo de Parámetros - usando el bindValue
-        $query->bindValue(':id',$idUsuario);
+        $query->bindValue(':id',$id);
         //Aquí ejecuto el borrado del usuario
         $query->execute();
     }
 
     static public function usuarioModificar($pdo,$tabla,$idUsuario){
-        $sql = "select $tabla.id, $tabla.name, $tabla.email, $tabla.role from $tabla where $tabla.id = '$idUsuario'";
+        $sql = "select id, nombre, apellido, email, perfil from $tabla where id = '$idUsuario'";
         $query = $pdo->prepare($sql);
         $query->execute();
         $usuarioModificar=$query->fetch(PDO::FETCH_ASSOC);
