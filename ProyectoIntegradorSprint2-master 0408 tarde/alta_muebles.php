@@ -49,22 +49,22 @@ if($_POST){
             <input name="nombre" type="text" class="form-control" id="nombre" value="" placeholder="Nombre">
           </div>
           <div class="form-group">
-            <input name="precio" type="text" class="form-control" id="precio" value="" placeholder="Precio">
+            <input name="precio" type="number" class="form-control" id="precio" value="" placeholder="Precio">
           </div>
           <div class="form-group">
-            <input name="material" type="material" class="form-control" id="material" value="" placeholder="Material">
+            <input name="material" type="text" class="form-control" id="material" value="" placeholder="Material">
           </div>
           <div class="form-group">
-            <input name="alto" type="alto" class="form-control" id="alto" value="" placeholder="Alto">
+            <input name="alto" type="number" class="form-control" id="alto" value="" placeholder="Alto (cm)">
           </div>
           <div class="form-group">
-            <input name="ancho" type="ancho" class="form-control" id="ancho" value="" placeholder="Ancho">
+            <input name="ancho" type="number" class="form-control" id="ancho" value="" placeholder="Ancho (cm)">
           </div>
           <div class="form-group">
-            <input name="profundidad" type="profundidad" class="form-control" id="profundidad" value="" placeholder="Profundidad">
+            <input name="profundidad" type="number" class="form-control" id="profundidad" value="" placeholder="Profundidad (cm)">
           </div>
           <div class="form-group">
-            <input name="color" type="color" class="form-control" id="color" value="" placeholder="Color">
+            <input name="color" type="text" class="form-control" id="color" value="" placeholder="Color">
           </div>
           <div class="form-group">
             <input name="foto" type="file" class="form-control" id="foto" value="" placeholder="Foto del Mueble">

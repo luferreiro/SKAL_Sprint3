@@ -12,7 +12,7 @@ $usuarios = Query::listado($pdo,"users");
 ?>
 
 <br>
-<h2 class="text-center"> Panel de Control</h2>
+<h2 class="text-center"> Panel de Control: Usuarios</h2>
 <br>
 <div class="spacer"></div>
 

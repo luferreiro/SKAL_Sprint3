@@ -16,11 +16,11 @@ $muebles = Query::listado($pdo, 'muebles');
          <div class="card-body">
            <h5 class="card-title"><?= $mueble['nombre']?>-</h5>
            <p class="card-text">
-             Alto: <?= $mueble['alto']?> <br>
-             Ancho: <?= $mueble['ancho']?> <br>
-             Profundidad:<?= $mueble['profundidad']?><br>
-             Madera:<?= $mueble['material']?> <br>
-             Precio:<?= $mueble['precio']?> <br>
+             Alto: <?= $mueble['alto']?> cm <br>
+             Ancho: <?= $mueble['ancho']?> cm<br>
+             Profundidad:<?= $mueble['profundidad']?> cm<br>
+             Madera: <?= $mueble['material']?> <br>
+             Precio: <?= $mueble['precio']?> $<br>
            </p>
          </div>
          <div class="card-footer">EN STOCK</div>

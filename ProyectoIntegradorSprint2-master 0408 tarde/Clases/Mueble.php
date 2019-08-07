@@ -1,35 +1,26 @@
 <?php
 
 class Mueble{
-  protected $id;
   protected $nombre;
   protected $precio;
   protected $material;
   protected $alto;
   protected $ancho;
   protected $profundidad;
-  protected $descripcion;
+  protected $color;
   protected $foto;
 
-  public function __construct($nombre=null, $precio=null, $material=null , $alto = null , $ancho=null, $profundidad=null, $descripcion=null, $foto=null){
+  public function __construct($nombre=null, $precio=null, $material=null , $alto = null , $ancho=null, $profundidad=null, $color=null, $foto=null){
     $this->nombre= $nombre;
     $this->precio = $precio;
     $this->material = $material;
     $this->alto = $alto;
     $this->ancho = $ancho;
     $this->profundidad = $profundidad;
-    $this->descripcion = $descripcion;
+    $this->color = $color;
     $this->foto = $foto;
   }
 
-
-  public function getId(){
-    return $this->id;
-  }
-
-  public function setId($id){
-    $this->id = $id;
-  }
 
   public function getSku(){
     return $this->sku;
@@ -87,12 +78,12 @@ public function setProfundidad($profundidad){
   $this->profundidad = $profundidad;
 }
 
-public function getDescripcion(){
-  return $this->descripcion;
+public function getColor(){
+  return $this->color;
 }
 
-public function setDescripcion($descripción){
-  $this->descripcion = $descripción;
+public function setColor($color){
+  $this->color = $color;
 }
 
 public function getFoto(){

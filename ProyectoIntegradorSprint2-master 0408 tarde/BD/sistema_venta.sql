@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-08-2019 a las 02:39:02
+-- Tiempo de generación: 07-08-2019 a las 13:07:29
 -- Versión del servidor: 10.3.16-MariaDB
 -- Versión de PHP: 7.3.6
 
@@ -36,24 +36,24 @@ CREATE TABLE `muebles` (
   `alto` decimal(2,0) DEFAULT NULL,
   `ancho` decimal(2,0) DEFAULT NULL,
   `profundidad` decimal(2,0) DEFAULT NULL,
-  `foto` varchar(200) DEFAULT NULL,
-  `descripcion` varchar(1000) DEFAULT NULL
+  `color` varchar(50) DEFAULT NULL,
+  `foto` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `muebles`
 --
 
-INSERT INTO `muebles` (`id`, `nombre`, `precio`, `material`, `alto`, `ancho`, `profundidad`, `foto`, `descripcion`) VALUES
-(4, 'LINEA EMILIA - BAJA', '12.000', 'Madera Laqueada', '1.2', '1.2', '1.2', '5d4a18706d2ad.jpg', '#000000'),
-(5, 'LINEA EMILIA - VAJILLERO', '16.000', 'Madera Laqueada', '1.2', '1.2', '1.2', '5d4a18a1dfaf6.jpg', '#000000'),
-(6, 'LINEA EMILIA - ALTA -', '10.000', 'Madera Laqueada', '1.2', '1.2', '1.2', '5d4a190258e11.jpg', '#000000'),
-(7, 'LINEA EMILIA - BAJA', '7.000', 'Madera Laqueada', '1.2', '1.2', '1.2', '5d4a19393a13b.jpg', '#ffffff'),
-(8, 'LINEA EMILIA - VAJILLERO', '7.000', 'Madera Laqueada', '1.2', '1.2', '1.2', '5d4a195ed75d1.jpg', '#000000'),
-(9, 'LINEA EMILIA - ALTA', '7.000', 'Madera Laqueada', '1.2', '1.2', '1.2', '5d4a1981c0b9f.jpg', '#000000'),
-(10, 'LINEA EMILIA - BAJA', '5.000', 'Madera Laqueada', '1.2', '1.2', '1.2', '5d4a19a8ac4a0.jpg', '#000000'),
-(11, 'LINEA EMILIA - VAJILLERO', '6.000', 'Madera Laqueada', '1.2', '1.2', '1.2', '5d4a19d3580df.jpg', '#000000'),
-(12, 'LINEA EMILIA - ALTA', '8.000', 'Madera Laqueada', '1.2', '1.2', '1.2', '5d4a19f429efe.jpg', '#000000');
+INSERT INTO `muebles` (`id`, `nombre`, `precio`, `material`, `alto`, `ancho`, `profundidad`, `color`, `foto`) VALUES
+(4, 'LINEA EMILIA - BAJA', '12000', 'Petiribí laqueado', '80', '99', '50', 'Blanco', '5d4aae67d1072.jpg'),
+(5, 'LINEA EMILIA - VAJILLERO -', '15000', 'Madera laqueada y petiribí', '99', '99', '50', 'Blanco', '5d4aaf2a8886d.jpg'),
+(6, 'LINEA EMILIA - ALTA', '9000', 'Madera pino hidrolaqueada', '99', '60', '50', 'Blanco', '5d4aaf692e072.jpg'),
+(7, 'Mesa de Luz - Emilia', '7000', 'Petiribí con laca sintética', '80', '60', '50', 'Gris', '5d4aafae247f0.jpg'),
+(8, 'Mesa de Luz - Luciana', '9800', 'Madera de Paraiso y Tapa Marmol', '75', '80', '50', 'Blanco', '5d4aaff62d198.jpg'),
+(9, 'Mesa de Luz - Cintia', '7000', 'Madera laqueada y petiribí', '70', '50', '45', 'Gris', '5d4ab04103549.jpg'),
+(10, 'Silla California', '7.000', 'Blanco laqueado', '95', '40', '40', 'Blanco', '5d4ab0696b5aa.jpg'),
+(11, 'Silla Paris', '8000', 'Madera laqueada y petiribí', '95', '50', '50', 'Blanco', '5d4ab08f4c374.jpg'),
+(12, 'Silla London', '9500', 'Madera laqueada y petiribí', '95', '50', '50', 'Blanco y Madera', '5d4ab0b542436.jpg');
 
 -- --------------------------------------------------------
 

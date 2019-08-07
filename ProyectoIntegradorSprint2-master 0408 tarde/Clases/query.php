@@ -40,4 +40,12 @@ class Query{
         $usuarioModificar=$query->fetch(PDO::FETCH_ASSOC);
         return $usuarioModificar;
     }
+
+    static public function muebleModificar($pdo,$tabla,$id){
+        $sql = "select id, nombre, precio, material, alto, ancho, profundidad, color from $tabla where id = '$id'";
+        $query = $pdo->prepare($sql);
+        $query->execute();
+        $muebleModificar=$query->fetch(PDO::FETCH_ASSOC);
+        return $muebleModificar;
+    }
 }
