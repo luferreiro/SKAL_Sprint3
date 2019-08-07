@@ -4,15 +4,14 @@ require_once ("funciones.php");
 require_once ("helpers.php");
 
 if($_POST){
- //Aquí genero mi objeto usuario, partiendo de la clase Usuario
- $mueble = new Mueble($_POST["nombre"],$_POST["precio"],$_POST["material"],$_POST["alto"],$_POST["ancho"],$_POST["profundidad"],$_POST["color"],$_FILES);
+	$foto = $registro_mueble->armarFoto($_FILES);
+ 	//Aquí genero mi objeto usuario, partiendo de la clase Usuario
+ 	$mueble = new Mueble($_POST["nombre"],$_POST["precio"],$_POST["material"],$_POST["alto"],$_POST["ancho"],$_POST["profundidad"],$_POST["color"],$foto);
+ 	Mysql::guardarProducto($pdo,'muebles', $mueble, $foto);
 
- $foto = $registro_mueble->armarFoto($mueble->getFoto());
-
-     Mysql::guardarProducto($pdo,$mueble,'muebles',$foto);
-     //Aquí redirecciono el usuario al login
-     redirect ("login.php");
-   }
+	//Aquí redirecciono el usuario al login
+  redirect ("login.php");
+}
 
 
 

@@ -64,6 +64,7 @@ CREATE TABLE `muebles` (
   `alto` DECIMAL(2) NULL,
   `ancho` DECIMAL(2) NULL,
   `profundidad` DECIMAL(2) NULL,
+  `foto` VARCHAR(200) NULL,
   `descripcion` VARCHAR(1000) NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;

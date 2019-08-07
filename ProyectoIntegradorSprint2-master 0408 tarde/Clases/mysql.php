@@ -27,12 +27,13 @@ static public function buscarPorEmail($email,$pdo,$tabla){
  }
 
 
-    static public function guardarProducto($pdo, $tabla, $producto){
-      $sql = "insert into $tabla (nombre, descripcion, precio) values (:nombre, :descripcion, :precio)";
+    static public function guardarProducto($pdo, $tabla, $producto, $foto){
+      $sql = "insert into $tabla (nombre,descripcion,precio,foto) values (:nombre, :descripcion, :precio, :foto)";
       $query = $pdo->prepare($sql);
       $query->bindvalue(':nombre', $producto->getNombre());
       $query->bindvalue(':descripcion', $producto->getDescripcion());
       $query->bindvalue(':precio', $producto->getPrecio());
+      $query->bindvalue(':foto', $foto);
       $query->execute();
     }
 

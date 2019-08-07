@@ -4,6 +4,10 @@ require_once ("helpers.php");
 require_once("loader.php");
 include ("nav_bar.php");
 
+if (isset($_SESSION['email']) == false or $_SESSION['perfil']==1){
+  header('Location:index.php');
+}
+
 $usuarios = Query::listado($pdo,"users");
 ?>
 

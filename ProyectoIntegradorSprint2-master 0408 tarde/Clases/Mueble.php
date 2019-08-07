@@ -1,6 +1,6 @@
 <?php
 
-abstract class Mueble{
+class Mueble{
   protected $id;
   protected $nombre;
   protected $precio;
@@ -11,15 +11,15 @@ abstract class Mueble{
   protected $descripcion;
   protected $foto;
 
-  public function __construct($nombre=null, $precio=null, $material=null , $alto = null , $ancho=null, $produndidad=null, $descripcion=null, $foto=null){
-    $this-> nombre= $nombre;
-    $this-> precio = $precio;
-    $this -> material = $material;
-    $this-> alto = $alto;
-    $this-> ancho = $ancho;
-    $this-> profundidad = $profundidad;
-    $this-> descripcion = $descripcion;
-    $this-> foto = $foto;
+  public function __construct($nombre=null, $precio=null, $material=null , $alto = null , $ancho=null, $profundidad=null, $descripcion=null, $foto=null){
+    $this->nombre= $nombre;
+    $this->precio = $precio;
+    $this->material = $material;
+    $this->alto = $alto;
+    $this->ancho = $ancho;
+    $this->profundidad = $profundidad;
+    $this->descripcion = $descripcion;
+    $this->foto = $foto;
   }
 
 

@@ -3,7 +3,7 @@
 class ArmarMueble{
     public function armarFoto($imagen){
         $nombre = $imagen["foto"]["name"];
-        $ext = pathinfo($nombre,PATHINFO_EXTENSION);
+        $ext = pathinfo($nombre, PATHINFO_EXTENSION);
         $archivoOrigen = $imagen["foto"]["tmp_name"];
         $archivoDestino = dirname(__DIR__);
         $archivoDestino = $archivoDestino."/imagenes/";
@@ -16,5 +16,5 @@ class ArmarMueble{
         return $foto;
     }
 
-  
+
 }
