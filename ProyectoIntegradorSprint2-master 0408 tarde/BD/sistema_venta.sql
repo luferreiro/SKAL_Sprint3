@@ -1,95 +1,118 @@
-CREATE DATABASE  IF NOT EXISTS `sistema_venta` /*DEFAULT CHARACTER SET utf8mb4 COLLATE utf8_unicode_ci*/;
-USE `sistema_venta`;
--- MySQL dump 10.13  Distrib 5.7.26, for Linux (x86_64)
+-- phpMyAdmin SQL Dump
+-- version 4.9.0.1
+-- https://www.phpmyadmin.net/
 --
--- Host: localhost    Database: sistema_venta
--- ------------------------------------------------------
--- Server version	5.7.26-0ubuntu0.18.10.1
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 07-08-2019 a las 02:39:02
+-- Versión del servidor: 10.3.16-MariaDB
+-- Versión de PHP: 7.3.6
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
--- Table structure for table `users`
-
-
-
-DROP TABLE IF EXISTS `users` ;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-
-CREATE TABLE `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` VARCHAR(45) NOT NULL,
-  `apellido` VARCHAR(45) NOT NULL,
-  `email` VARCHAR(45) NOT NULL,
-  `password` VARCHAR(200) NOT NULL,
-  `avatar` VARCHAR(45) NULL,
-  `perfil` int(8) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `users`
-
-LOCK TABLES `users` WRITE;
-/*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES(1,"Pedro","Malbran","pm@gmail.com","$2y$10$i49LHz.3zVQ2vUkOyHNelOpeoSQkvZ6b\/JWwmWml162aWHt.EMVSS","5d3dac79d968b.jpg",1);
-INSERT INTO `users` VALUES(2,"Emilia","Bolzano","emi@gmail.com","$2y$10$x5QxEs04fJ2lIYLWntmkxuAgE9IUGbzKDTdQhgaiBoQKnp734TWne","5cf70bc2ecac1.jpg",9);
-INSERT INTO `users` VALUES(3,"Luciana","Ferreiro","luli@gmail.com","$2y$10$7YR7QtbLenPkHmAMl0tcYu\/yskYrfjGcLJ4DXrP3B6ioy.vTLZzyK","5cf70afb7e85a.jpg",1);
-
-/*!40000 ALTER TABLE `users` ENABLE KEYS */;
-UNLOCK TABLES;
-
+-- Base de datos: `sistema_venta`
 --
 
-DROP TABLE IF EXISTS `muebles` ;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `muebles`
+--
 
 CREATE TABLE `muebles` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `nombre` VARCHAR(45) NOT NULL,
-  `precio` VARCHAR(45) NOT NULL,
-  `material` VARCHAR(45) NULL,
-  `alto` DECIMAL(2) NULL,
-  `ancho` DECIMAL(2) NULL,
-  `profundidad` DECIMAL(2) NULL,
-  `foto` VARCHAR(200) NULL,
-  `descripcion` VARCHAR(1000) NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+  `id` int(11) NOT NULL,
+  `nombre` varchar(45) NOT NULL,
+  `precio` varchar(45) NOT NULL,
+  `material` varchar(45) DEFAULT NULL,
+  `alto` decimal(2,0) DEFAULT NULL,
+  `ancho` decimal(2,0) DEFAULT NULL,
+  `profundidad` decimal(2,0) DEFAULT NULL,
+  `foto` varchar(200) DEFAULT NULL,
+  `descripcion` varchar(1000) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `muebles`
+-- Volcado de datos para la tabla `muebles`
 --
 
---LOCK TABLES `muebles` WRITE;
---/*!40000 ALTER TABLE `users` DISABLE KEYS */;
---INSERT INTO `muebles` VALUES ;
---/*!40000 ALTER TABLE `users` ENABLE KEYS */;
---UNLOCK TABLES;
+INSERT INTO `muebles` (`id`, `nombre`, `precio`, `material`, `alto`, `ancho`, `profundidad`, `foto`, `descripcion`) VALUES
+(4, 'LINEA EMILIA - BAJA', '12.000', 'Madera Laqueada', '1.2', '1.2', '1.2', '5d4a18706d2ad.jpg', '#000000'),
+(5, 'LINEA EMILIA - VAJILLERO', '16.000', 'Madera Laqueada', '1.2', '1.2', '1.2', '5d4a18a1dfaf6.jpg', '#000000'),
+(6, 'LINEA EMILIA - ALTA -', '10.000', 'Madera Laqueada', '1.2', '1.2', '1.2', '5d4a190258e11.jpg', '#000000'),
+(7, 'LINEA EMILIA - BAJA', '7.000', 'Madera Laqueada', '1.2', '1.2', '1.2', '5d4a19393a13b.jpg', '#ffffff'),
+(8, 'LINEA EMILIA - VAJILLERO', '7.000', 'Madera Laqueada', '1.2', '1.2', '1.2', '5d4a195ed75d1.jpg', '#000000'),
+(9, 'LINEA EMILIA - ALTA', '7.000', 'Madera Laqueada', '1.2', '1.2', '1.2', '5d4a1981c0b9f.jpg', '#000000'),
+(10, 'LINEA EMILIA - BAJA', '5.000', 'Madera Laqueada', '1.2', '1.2', '1.2', '5d4a19a8ac4a0.jpg', '#000000'),
+(11, 'LINEA EMILIA - VAJILLERO', '6.000', 'Madera Laqueada', '1.2', '1.2', '1.2', '5d4a19d3580df.jpg', '#000000'),
+(12, 'LINEA EMILIA - ALTA', '8.000', 'Madera Laqueada', '1.2', '1.2', '1.2', '5d4a19f429efe.jpg', '#000000');
 
+-- --------------------------------------------------------
 
-
--- Dumping routines for database 'sistema_venta'
 --
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+-- Estructura de tabla para la tabla `users`
+--
 
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(45) NOT NULL,
+  `apellido` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `password` varchar(200) NOT NULL,
+  `avatar` varchar(45) DEFAULT NULL,
+  `perfil` int(8) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`id`, `nombre`, `apellido`, `email`, `password`, `avatar`, `perfil`) VALUES
+(1, 'Pedro', 'Malbran', 'pm@gmail.com', '$2y$10$i49LHz.3zVQ2vUkOyHNelOpeoSQkvZ6b/JWwmWml162aWHt.EMVSS', '5d3dac79d968b.jpg', 1),
+(2, 'Emilia', 'Bolzano', 'emi@gmail.com', '$2y$10$x5QxEs04fJ2lIYLWntmkxuAgE9IUGbzKDTdQhgaiBoQKnp734TWne', '5cf70bc2ecac1.jpg', 9),
+(3, 'Luciana', 'Ferreiro', 'luli@gmail.com', '$2y$10$7YR7QtbLenPkHmAMl0tcYu/yskYrfjGcLJ4DXrP3B6ioy.vTLZzyK', '5cf70afb7e85a.jpg', 1);
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `muebles`
+--
+ALTER TABLE `muebles`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `muebles`
+--
+ALTER TABLE `muebles`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT de la tabla `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;

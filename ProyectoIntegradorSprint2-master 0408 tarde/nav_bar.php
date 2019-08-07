@@ -56,6 +56,7 @@ require_once ("loader.php")
             <?php
             if (isset($_SESSION['perfil']) && $_SESSION['perfil'] == 9): ?>
                 <a class="nav-link" href="abm.php">ABM</a>
+                <a class="nav-link" href="alta_muebles.php">Altas Muebles</a>
               <?php endif; ?>
           </ul>
       </div>

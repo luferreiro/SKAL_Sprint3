@@ -10,7 +10,7 @@ if($_POST){
  	Mysql::guardarProducto($pdo,'muebles', $mueble, $foto);
 
 	//Aquí redirecciono el usuario al login
-  redirect ("login.php");
+  redirect ("alta_muebles.php");
 }
 
 
